@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+mybatis:
+      mapper-locations: classpath:mapper/*.xml  #classpath就是应用程序resources的路径
+      type-aliases-package: com.iflytek.edu.model
+      configuration:
+        log-impl : org.apache.ibatis.logging.stdout.StdOutImpl #通过日志将sql再控制台打印出来
+        mapUnderscoreToCamelCase: true #设为true表示开启驼峰转换
